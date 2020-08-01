@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Header from '../component/Header/Header'
+import RoomForm from '../component/RoomForm/RoomForm'
 
 function Home() {
     return (
-        <div>
+        <Fragment>
             <Header/>
-        </div>
+            <RoomForm/>
+        </Fragment>
     )
 }
 
