@@ -1,5 +1,4 @@
 import React from 'react'
-import heroImage from '../../assets/images/hero-image.svg';
 
 function RoomForm() {
     return (

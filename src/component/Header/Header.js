@@ -10,7 +10,7 @@ function Header() {
             <div id="nav" className="text-white text-2xl py-2 px-4 font-sans text-gray-800 bg-white font-bold rounded-lg shadow-lg select-none">
                 <Link to="/" className="inline-block mx-6 hover:underline">Home</Link>
                 <Link to="/about" className="inline-block mx-6 hover:underline">About</Link>
-                <a href="https://github.com/Rajakumardev/fac-eh-client" target="_blank" className="inline-block mx-6 hover:underline">Github</a>
+                <a href="https://github.com/Rajakumardev/fac-eh-client" rel="noreferrer noopener" target="_blank" className="inline-block mx-6 hover:underline">Github</a>
             </div>
         </div>
     )
