@@ -1,6 +1,15 @@
 import React from 'react'
+import {createRoom} from '../../utils/roomUtils';
+import { useHistory } from 'react-router-dom';
 
 function RoomForm() {
+    const history = useHistory();
+    const createRoomBtnHandler = async (e) =>{
+        //send api req to /apiv1/createroom endpoint to create room
+        const {roomid} = await createRoom();
+        history.push('/join/'+roomid);
+    }
+
     return (
         <div className="mx-4 p-4 font-sans text-gray-800 font-bold rounded-lg flex items-center justify-center">
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2">
@@ -14,7 +23,7 @@ function RoomForm() {
                     </button>
                 </div>
                 <div className="flex items-center justify-around">
-                    <button className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    <button onClick={createRoomBtnHandler} className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                         Create new room
                     </button>
                 </div>
