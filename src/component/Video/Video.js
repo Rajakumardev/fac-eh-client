@@ -2,7 +2,7 @@ import React from 'react'
 
 function Video() {
     return (
-        <div className="border">
+        <div className="">
             Video
         </div>
     )
